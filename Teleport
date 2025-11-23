@@ -2,13 +2,10 @@
 local player = game.Players.LocalPlayer
 local playerGui = player:WaitForChild("PlayerGui")
 
--- Pastikan gui yang dimaksud benar
--- ganti test1.sh jika berbeda
 local teleportButton = script.Parent:WaitForChild("TeleportButton") 
 
 local teleportEvent = game.ReplicatedStorage:WaitForChild("TeleportRequest")
 
--- Tombol teleport dari UI yang sudah ada
 teleportButton.MouseButton1Click:Connect(function()
 	teleportEvent:FireServer("Spawn")
 end)
